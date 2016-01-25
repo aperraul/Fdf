@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlx_window_init.c                               :+:      :+:    :+:   */
+/*   new_image.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/23 15:02:00 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/23 15:32:43 by aperraul         ###   ########.fr       */
+/*   Created: 2016/01/23 16:05:40 by aperraul          #+#    #+#             */
+/*   Updated: 2016/01/25 12:53:16 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Libdraw.h"
 
-void	ft_mlx_init(t_mlx *mlx, int size_x, int size_y, char *title)
+void		ft_new_image(t_mlx *mlx)
 {
-	mlx->ptr_mlx = *mlx_init();
-	mlx->size_x = size_x;
-	mlx->size_y = size_y;
-	mlz->ptr_win = mlx_new_window(mlx.mlx, mlx.size_x, mlx_size_y, mlx_title);
+	t_img	*img;
+	void	*a;
+
+	if (!(img = (t_img *)malloc(sizeof(t_img))))
+		return ;
+	img->endian = 0;
+	img->width = mlx->X;
+	img->p_img = mlx_new_image(mlx->p_mlx, mlx->X, mlx->Y);
+	if (!(img->p_img))
+		return ;
+	a = mlx_get_data_addr(img->p_img, &img->bpp, &img->width, &img->endian);
+	img->data = a;
+	mlx->mlx_img = img;
+	mlx->mlx_img->max_size = (img->bpp / 8) * mlx->X * mlx->Y;
 }
