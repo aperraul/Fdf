@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/25 16:12:04 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/01/25 18:00:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void			ft_new_image(t_mlx *mlx);
 void			ft_draw_pixel(t_mlx *mlx, int color, t_pt pt);
 t_pt			ft_make_pt(int x, int y);
 t_3Dpt			ft_make_3Dpt(int x, int y, int z);
-s_line			ft_make_line(int x1, int y1, int x2, int y2);
+t_line			ft_make_line(int x1, int y1, int x2, int y2);
+void			ft_draw_line(t_line line, t_mlx *mlx, int color);
 
 #endif

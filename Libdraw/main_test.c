@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 13:09:04 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/25 15:11:14 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/01/25 18:29:09 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,11 @@
 int		main()
 {
 	t_mlx	*mlx;
-	t_pt	pt;
+	t_line	line;
 
-	pt.y = 20;
 	mlx = ft_mlx_init(mlx, 400, 400, "FDF");
-	while (pt.y < 40)
-	{
-		pt.x = 20;
-		while (pt.x < 40)
-		{
-			mlx_pixel_put(mlx->p_mlx, mlx->p_win, pt.x, pt.y, 0x00FF0000);
-//			ft_draw_pixel(mlx, 0x00FFFFFF, pt);
-			pt.x++;
-		}
-		pt.y++;
-	}
+	line = ft_make_line(100, 50, 230, 40);
+	ft_draw_line(line, mlx, 0x00FF00);
+	mlx_put_image_to_window(mlx->p_mlx, mlx->p_win, mlx->mlx_img->p_img, 0, 0);
 	mlx_loop(mlx);
 }
