@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/25 18:00:15 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/01/31 11:58:20 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <math.h>
+#include <fcntl.h>
 
 typedef struct	s_line
 {
@@ -61,5 +62,6 @@ t_pt			ft_make_pt(int x, int y);
 t_3Dpt			ft_make_3Dpt(int x, int y, int z);
 t_line			ft_make_line(int x1, int y1, int x2, int y2);
 void			ft_draw_line(t_line line, t_mlx *mlx, int color);
+void			ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color);
 
 #endif
