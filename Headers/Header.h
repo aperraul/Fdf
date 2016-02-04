@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/03 16:54:45 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/04 15:13:13 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct			s_array
 {
 	int					**tab;
 	int					y;
-	int					**nb_x_line;
+	int					*nb_x_line;
 }						t_array;
 
 typedef struct			s_lstline
