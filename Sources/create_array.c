@@ -6,13 +6,13 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/04 14:57:23 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/04 18:09:12 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-t_lstline		*ft_next_list()
+t_lstline		*ft_next_list(void)
 {
 	t_lstline	*list;
 
@@ -22,7 +22,7 @@ t_lstline		*ft_next_list()
 	return (list);
 }
 
-t_lstline	*ft_add_list(t_lstline *begin, char *line)
+t_lstline		*ft_add_list(t_lstline *begin, char *line)
 {
 	t_lstline	*list;
 
@@ -41,7 +41,7 @@ t_lstline	*ft_add_list(t_lstline *begin, char *line)
 	return (begin);
 }
 
-t_array		*ft_create_array(t_array *array, int fd)
+t_array			*ft_create_array(t_array *array, int fd)
 {
 	t_lstline	*list;
 	int			nb_lines;
@@ -52,10 +52,16 @@ t_array		*ft_create_array(t_array *array, int fd)
 	list = NULL;
 	state = 1;
 	nb_lines = 0;
-	if (!(array = (t_array *)malloc(sizeof(t_array))))
-		return (NULL);
 	while ((state = get_next_line(fd, &line)) > 0)
 	{
+		if (ft_check_line(line) == 0)
+		{
+			ft_putchar('a');
+			ft_del_array(array);
+			ft_putstr("\nb\n");
+			ft_del_list(list);
+			return (array);
+		}
 		list = ft_add_list(list, line);
 		nb_lines++;
 	}
