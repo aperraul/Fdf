@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/04 18:09:12 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/05 12:44:17 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,8 @@ t_array			*ft_create_array(t_array *array, int fd)
 	{
 		if (ft_check_line(line) == 0)
 		{
-			ft_putchar('a');
-			ft_del_array(array);
-			ft_putstr("\nb\n");
-			ft_del_list(list);
+			array = ft_del_array(array);
+			list = ft_del_list(list);
 			return (array);
 		}
 		list = ft_add_list(list, line);
@@ -67,5 +65,6 @@ t_array			*ft_create_array(t_array *array, int fd)
 	}
 	array->y = nb_lines;
 	array = ft_new_tab(list, array);
+	array = ft_new_tab_pt(array);
 	return (array);
 }

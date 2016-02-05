@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_line.c                                    :+:      :+:    :+:   */
+/*   ft_new_tab_pt.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/04 17:18:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 11:55:56 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/05 12:37:38 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/05 13:03:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-int		ft_check_line(char *line)
+t_array		*ft_new_tab_pt(t_array *array)
 {
-	int		i;
-
-	i = 0;
-	while (line[i])
-	{
-		if ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	array->tab_pt = ft_alloc_tab_pt(array);
+	return (array);
 }

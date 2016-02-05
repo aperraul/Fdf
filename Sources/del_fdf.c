@@ -6,38 +6,45 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:24:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/04 18:09:17 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/05 13:07:20 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-void	ft_del_array(t_array *array)
+t_array		*ft_del_array(t_array *array)
 {
 	int		i;
 
 	i = -1;
-	if (i <= array->y)
+	if (array)
 	{
-		ft_putstr("YOLO\n");
-		while (array->tab_pt[++i])
-			ft_memdel((void **)&array->tab_pt[i]);
+		if (array->tab_pt)
+		{
+			while (array->tab_pt[++i])
+				ft_memdel((void **)&array->tab_pt[i]);
+			ft_memdel((void **)array->tab_pt);
+		}
+		i = -1;
+		if (array->tab)
+		{
+			while (array->tab[++i])
+				ft_memdel((void **)&array->tab[i]);
+			ft_memdel((void **)array->tab);
+		}
+		if (array->nb_x_line)
+			ft_memdel((void **)&array->nb_x_line);
+		ft_memdel((void **)&array);
 	}
-	ft_memdel((void **)array->tab_pt);
-	i = -1;
-		while (array->tab[++i])
-		ft_memdel((void **)&array->tab[i]);
-	ft_memdel((void **)array->tab);
-	ft_memdel((void **)&array->nb_x_line);
-	ft_memdel((void **)&array);
+	return (array);
 }
 
-void	ft_del_list(t_lstline *begin)
+t_lstline		*ft_del_list(t_lstline *begin)
 {
 	t_lstline	*temp;
 
 	if (!begin)
-		return ;
+		return (NULL);
 	while (begin)
 	{
 		temp = begin->next;
@@ -45,4 +52,5 @@ void	ft_del_list(t_lstline *begin)
 		ft_memdel((void **)&begin);
 		begin = temp;
 	}
+	return (begin);
 }

@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_line.c                                    :+:      :+:    :+:   */
+/*   draw_flush_img.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/04 17:18:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 11:55:56 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/05 12:12:06 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/05 12:13:55 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/Libdraw.h"
 
-int		ft_check_line(char *line)
+void	ft_flush_image(t_mlx *x)
 {
-	int		i;
-
-	i = 0;
-	while (line[i])
-	{
-		if ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	mlx_put_image_to_window(x->p_mlx, x->p_win, x->mlx_img->p_img, 0, 0);
 }
