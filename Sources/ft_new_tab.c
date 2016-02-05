@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 16:39:43 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 12:30:51 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/05 13:38:49 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ t_array		*ft_new_tab(t_lstline *list, t_array *a)
 	{
 		str = ft_strsplit(list->line, ' ');
 		a->nb_x_line[j] = ft_memlen((void **)str);
-		if (a->max_size_x < a->nb_x_line[j])
-			a->max_size_x = a->nb_x_line[j];
 		a->tab[j] = (int *)ft_memalloc(sizeof(int) * (a->nb_x_line[j] + 1));
 		i = -1;
 		while (str[++i])

@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 12:44:17 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/05 13:44:14 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ t_array			*ft_create_array(t_array *array, int fd)
 	}
 	array->y = nb_lines;
 	array = ft_new_tab(list, array);
+	ft_putstr("YOOLOO");
 	array = ft_new_tab_pt(array);
+	ft_putstr("SALLUTT");
 	return (array);
 }
