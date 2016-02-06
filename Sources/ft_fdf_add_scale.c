@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_new_tab_pt.c                                    :+:      :+:    :+:   */
+/*   ft_fdf_add_scale.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/05 12:37:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 12:02:16 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/06 13:08:18 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/06 13:24:35 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-t_array		*ft_new_tab_pt(t_array *array)
+void	ft_fdf_add_scale(t_array *array, t_3Dpt scale)
 {
 	t_pt	pt;
-	t_pt	O;
 
-	O = ft_make_pt((array->max_size_x / 2), (array->y / 2));
-	array->tab_pt = ft_alloc_tab_pt(array);
 	pt.y = -1;
 	while (++pt.y < array->y)
 	{
 		pt.x = -1;
 		while (++pt.x < array->nb_x_line[pt.y])
 		{
-			array->tab_pt[pt.y][pt.x].x = pt.x - O.x;
-			array->tab_pt[pt.y][pt.x].y = pt.y - O.y;
-			array->tab_pt[pt.y][pt.x].z = array->tab[pt.y][pt.x];
+			array->tab_pt[pt.y][pt.x].x *= scale.x;
+			array->tab_pt[pt.y][pt.x].y *= scale.y;
+			array->tab_pt[pt.y][pt.x].z *= scale.z;
 		}
 	}
-	return (array);
 }

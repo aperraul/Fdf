@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 12:11:17 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/06 13:06:36 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,29 @@ typedef struct	s_mlx
 	t_img		*mlx_img;
 }				t_mlx;
 
+typedef struct	s_vector
+{
+	float		x;
+	float		y;
+	float		z;
+}				t_vector;
+
+typedef struct	s_matrix
+{
+	t_vector	x;
+	t_vector	y;
+	t_vector	z;
+	t_pt		pos;
+}				t_matrix;
+
+typedef struct	s_matrix_rot
+{
+	t_matrix	mx;
+	t_matrix	my;
+	t_matrix	mz;
+	t_matrix	m;
+}				t_matrix_rot;
+
 typedef struct	s_3Dpt
 {
 	int			x;
@@ -61,6 +84,8 @@ void			ft_draw_pixel(t_mlx *mlx, int color, t_pt pt);
 t_pt			ft_make_pt(int x, int y);
 t_3Dpt			ft_make_3Dpt(int x, int y, int z);
 t_line			ft_make_line(int x1, int y1, int x2, int y2);
+t_vector		ft_make_vector(float x, float y, float z);
+t_matrix		ft_init_matrix(t_pt pos);
 void			ft_draw_line(t_line line, t_mlx *mlx, int color);
 void			ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color);
 void			ft_flush_img(t_mlx *x);
