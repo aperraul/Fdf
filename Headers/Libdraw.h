@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 13:06:36 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/06 15:35:39 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,10 @@ t_pt			ft_make_pt(int x, int y);
 t_3Dpt			ft_make_3Dpt(int x, int y, int z);
 t_line			ft_make_line(int x1, int y1, int x2, int y2);
 t_vector		ft_make_vector(float x, float y, float z);
+t_matrix		ft_make_matrix_x(float rad);
+t_matrix		ft_make_matrix_y(float rad);
+t_matrix		ft_make_matrix_z(float rad);
+t_matrix		ft_multiply_matrix(t_matrix m1, t_matrix m2);
 t_matrix		ft_init_matrix(t_pt pos);
 void			ft_draw_line(t_line line, t_mlx *mlx, int color);
 void			ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color);

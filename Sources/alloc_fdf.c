@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/05 11:34:35 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/05 13:44:10 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/06 16:57:37 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_array		*ft_alloc_array(t_array *array)
 	if (!(array = (t_array *)malloc(sizeof(t_array))))
 		return (NULL);
 	array->tab_pt = NULL;
+	array->end_tab = NULL;
 	array->tab = NULL;
 	array->max_size_x = 0;
 	array->y = 0;
@@ -34,4 +35,16 @@ t_3Dpt		**ft_alloc_tab_pt(t_array *a)
 	while (++b < a->y)
 		tab3[b] = (t_3Dpt *)ft_memalloc(sizeof(t_3Dpt) * (a->nb_x_line[b] + 1));
 	return (tab3);
+}
+
+t_pt	**ft_alloc_end_tab(t_array *a)
+{
+	t_pt	**end_tab;
+	int		b;
+
+	end_tab = (t_pt **)ft_memalloc(sizeof(t_pt *) * (a->y + 1));
+	b = -1;
+	while (++b < a->y)
+		end_tab[b] = (t_pt *)ft_memalloc(sizeof(t_pt) * (a->nb_x_line[b] + 1));
+	return (end_tab);
 }

@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 13:24:07 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/06 16:57:30 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 typedef struct			s_array
 {
 	t_3Dpt				**tab_pt;
+	t_pt				**end_tab;
 	int					**tab;
 	int					max_size_x;
 	int					y;
@@ -53,8 +54,9 @@ t_array					*ft_del_array(t_array *array);
 t_lstline				*ft_del_list(t_lstline *begin);
 t_fdf					*ft_init_fdf(t_mlx *mlx, t_array *array);
 t_array					*ft_alloc_array(t_array *array);
-t_3Dpt					**ft_alloc_tab_pt(t_array *array);
+t_3Dpt					**ft_alloc_tab_pt(t_array *a);
+t_pt					**ft_alloc_end_tab(t_array *a);
 t_array					*ft_new_tab_pt(t_array *array);
-void					ft_fdf_add_scale(t_array *array, t_3Dpt scale)
+void					ft_fdf_add_scale(t_array *array, t_3Dpt scale);
 
 #endif
