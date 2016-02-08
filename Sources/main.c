@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/08 12:09:05 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/08 16:34:17 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ int		main(int argc, char **argv)
 	int			fd;
 	t_array		*array;
 	t_fdf		*fdf;
-	int			x;
-	int			y;
 	t_mlx		*mlx;
 
+	mlx = NULL;
 	if (argc == 2)
 	{
 		array = NULL;
@@ -40,6 +39,7 @@ int		main(int argc, char **argv)
 		fdf = ft_init_fdf(mlx, array);
 		ft_fdf_add_scale(array, fdf->scale);
 		ft_fdf(fdf);
+		mlx_loop(mlx);
 /*		y = 0;
 		ft_putstr("max X = ");
 		ft_putnbr(array->max_size_x);

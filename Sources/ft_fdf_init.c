@@ -6,13 +6,13 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 12:48:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 13:05:20 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/08 15:28:44 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-t_fdf	*ft_fdf_init(t_mlx *mlx, t_array *array)
+t_fdf	*ft_init_fdf(t_mlx *mlx, t_array *array)
 {
 	t_fdf	*fdf;
 
