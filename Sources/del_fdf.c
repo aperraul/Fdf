@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:24:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 16:57:32 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/08 11:58:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ t_array		*ft_del_array(t_array *array)
 			while (array->tab_pt[++i])
 				ft_memdel((void **)&array->tab_pt[i]);
 			ft_memdel((void **)array->tab_pt);
+		}
+		i = -1;
+		if (array->end_tab)
+		{
+			while (array->end_tab)
+				ft_memdel((void **)&array->end_tab[i]);
+			ft_memdel((void **)array->end_tab);
 		}
 		i = -1;
 		if (array->tab)

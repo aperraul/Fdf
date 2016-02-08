@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 16:57:35 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/08 12:09:05 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		main(int argc, char **argv)
 		close(fd);
 		mlx = ft_mlx_init(mlx, 800, 800, "FDF");
 		fdf = ft_init_fdf(mlx, array);
+		ft_fdf_add_scale(array, fdf->scale);
 		ft_fdf(fdf);
 /*		y = 0;
 		ft_putstr("max X = ");

@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/27 15:26:56 by aperraul          #+#    #+#              #
-#    Updated: 2016/02/06 15:35:33 by aperraul         ###   ########.fr        #
+#    Updated: 2016/02/08 12:22:25 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS = draw_line.c \
 	   ft_make_pt.c \
 	   ft_make_vector.c \
 	   ft_init_matrix.c \
+	   ft_apply_matrix.c \
 	   ft_multiply_matrix.c \
 	   make_matrix.c \
 	   mlx_init.c \
@@ -32,6 +33,7 @@ OBJS = draw_line.o \
 	   ft_make_pt.o \
 	   ft_make_vector.o \
 	   ft_init_matrix.o \
+	   ft_apply_matrix.o \
 	   ft_multiply_matrix.o \
 	   make_matrix.o \
 	   mlx_init.o \
