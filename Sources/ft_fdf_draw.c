@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:56:40 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/13 15:22:04 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/13 15:31:09 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ static	void	ft_fdf_draw_ver(t_array *a, t_mlx *mlx)
 		j = -1;
 		while (++j < (a->y -1))
 		{
+			//ajouter une condition pour les points aui n existe pas si une ligne est plus grande q une autre;
 				p1.x = a->end_tab[j][i].x;
 				p1.y = a->end_tab[j][i].y;
 				p2.x = a->end_tab[j + 1][i].x;
