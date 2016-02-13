@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:56:40 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/08 17:45:57 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/13 15:22:04 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	void	ft_fdf_draw_hor(t_array *a, t_mlx *mlx)
 	t_pt	p2;
 
 	j = -1;
-	while (++j < (a->y -1))
+	while (++j < (a->y))
 	{
 		i = -1;
 		while (++i < (a->nb_x_line[j] - 1))
@@ -40,26 +40,23 @@ static	void	ft_fdf_draw_ver(t_array *a, t_mlx *mlx)
 {
 	int		i;
 	int		j;
-	int		j2;
 	t_line	line;
 	t_pt	p1;
 	t_pt	p2;
 
 	i = -1;
-	j2 = 0;
-	while (++i < (a->nb_x_line[j2] - 1))
+	while (++i < (a->max_size_x))
 	{
 		j = -1;
 		while (++j < (a->y -1))
 		{
-			p1.x = a->end_tab[j][i].x;
-			p1.y = a->end_tab[j][i].y;
-			p2.x = a->end_tab[j + 1][i].x;
-			p2.y = a->end_tab[j + 1][i].y;
-			line = ft_make_line(p1.x, p1.y, p2.x, p2.y);
-			ft_draw_line(line, mlx, 0xffffff);
+				p1.x = a->end_tab[j][i].x;
+				p1.y = a->end_tab[j][i].y;
+				p2.x = a->end_tab[j + 1][i].x;
+				p2.y = a->end_tab[j + 1][i].y;
+				line = ft_make_line(p1.x, p1.y, p2.x, p2.y);
+				ft_draw_line(line, mlx, 0xffffff);
 		}
-		j2++;;
 	}
 }
 

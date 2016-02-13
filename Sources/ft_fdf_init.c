@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 12:48:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/08 17:18:58 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/13 15:16:51 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ t_fdf	*ft_init_fdf(t_mlx *mlx, t_array *array)
 	fdf->array = array;
 	fdf->mlx = mlx;
 	fdf->key = -1;
-	fdf->rad = ft_make_vector(3.141f, 3.141f, 0.0f);
+	fdf->rad = ft_make_vector(M_PI / 6, M_PI / 6, 0.0f);
 	fdf->pos = ft_make_pt(400, 400);
-	fdf->scale = ft_make_3Dpt(10, 10, 2);
+	fdf->scale = ft_make_3Dpt(30, 30, 7);
 	return (fdf);
 }
