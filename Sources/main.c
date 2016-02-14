@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/13 14:36:02 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/14 17:52:06 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,51 +39,7 @@ int		main(int argc, char **argv)
 		fdf = ft_init_fdf(mlx, array);
 		ft_fdf_add_scale(array, fdf->scale);
 		ft_fdf(fdf);
-/*		y = 0;
-		ft_putstr("max X = ");
-		ft_putnbr(array->max_size_x);
-		ft_putchar('\n');
-		while (y < array->y)
-		{
-			ft_putstr("line ");
-			ft_putnbr(y);
-			x = 0;
-			while (x < array->nb_x_line[y])
-			{
-				ft_putstr(", x");
-				ft_putnbr(x);
-				ft_putstr(" = ");
-				ft_putnbr(array->tab[y][x]);
-				x++;
-			}
-			ft_putchar('\n');
-			y++;
-		}
-		y = 0;
-		while (y < array->y)
-		{
-			ft_putstr("line ");
-			ft_putnbr(y);
-			x = 0;
-			while (x < array->nb_x_line[y])
-			{
-				ft_putstr(" x");
-				ft_putnbr(x);
-				ft_putstr(" = ");
-				ft_putstr("{[x -> ");
-				ft_putnbr(array->tab_pt[y][x].x);
-				ft_putstr("]; ");
-				ft_putstr("[y -> ");
-				ft_putnbr(array->tab_pt[y][x].y);
-				ft_putstr("]; ");
-				ft_putstr("[z -> ");
-				ft_putnbr(array->tab_pt[y][x].z);
-				ft_putstr("]} ||");
-				x++;
-			}
-			ft_putchar('\n');
-			y++;
-		}*/
+		mlx_hook(mlx->p_win, KeyPress, KeyPressMask, ft_fdf_event, fdf);
 		mlx_loop(fdf->mlx);
 	}
 	else

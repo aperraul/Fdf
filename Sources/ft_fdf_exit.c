@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_new_tab_pt.c                                    :+:      :+:    :+:   */
+/*   ft_fdf_exit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/05 12:37:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 16:21:26 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/14 16:06:30 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/14 18:11:21 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-t_array		*ft_new_tab_pt(t_array *array)
+void	ft_fdf_exit(t_fdf *fdf)
 {
-	t_pt	pt;
-	t_pt	O;
-
-	O = ft_make_pt((array->max_size_x / 2), (array->y / 2));
-	array->tab_pt = ft_alloc_tab_pt(array);
-	pt.y = -1;
-	while (++pt.y < array->y)
-	{
-		pt.x = -1;
-		while (++pt.x < array->nb_x_line[pt.y])
-		{
-			array->tab_pt[pt.y][pt.x].x = pt.x - O.x;
-			array->tab_pt[pt.y][pt.x].y = pt.y - O.y;
-			array->tab_pt[pt.y][pt.x].z = array->tab[pt.y][pt.x];
-		}
-	}
-	return (array);
+	ft_del_array(fdf->array);
+	ft_clear_mlx(fdf->mlx);
+	ft_memdel((void **)fdf);
+	exit(0);
 }

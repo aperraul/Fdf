@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/13 14:31:51 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/14 17:43:29 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include "../Libft/libft.h"
 # include "mlx.h"
 # include "Libdraw.h"
+# include "X.h"
 
 typedef struct			s_array
 {
@@ -62,5 +63,7 @@ void					ft_fdf_add_scale(t_array *array, t_3Dpt scale);
 void					ft_fdf_add_pos(t_array *a, t_pt pos);
 void					ft_fdf(t_fdf *fdf);
 void					ft_fdf_draw(t_array *a, t_mlx *mlx);
+int						ft_fdf_event(int keycode, t_fdf *fdf);
+void					ft_fdf_exit(t_fdf *fdf);
 
 #endif

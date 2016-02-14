@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_new_tab_pt.c                                    :+:      :+:    :+:   */
+/*   fdf_event.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/05 12:37:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 16:21:26 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/14 12:23:37 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/14 17:48:53 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/Header.h"
 
-t_array		*ft_new_tab_pt(t_array *array)
+int		ft_fdf_event(int keycode, t_fdf *fdf)
 {
-	t_pt	pt;
-	t_pt	O;
-
-	O = ft_make_pt((array->max_size_x / 2), (array->y / 2));
-	array->tab_pt = ft_alloc_tab_pt(array);
-	pt.y = -1;
-	while (++pt.y < array->y)
-	{
-		pt.x = -1;
-		while (++pt.x < array->nb_x_line[pt.y])
-		{
-			array->tab_pt[pt.y][pt.x].x = pt.x - O.x;
-			array->tab_pt[pt.y][pt.x].y = pt.y - O.y;
-			array->tab_pt[pt.y][pt.x].z = array->tab[pt.y][pt.x];
-		}
-	}
-	return (array);
+	if (keycode == 53)
+		ft_fdf_exit(fdf);
+	fdf->key = keycode;
+	ft_fdf(fdf);
+	return (0);
 }
