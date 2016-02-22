@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_fill_end_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/22 15:46:29 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 12:51:15 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/08 12:29:26 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/13 14:43:57 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../Headers/Header.h"
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "../libft/libft.h"
+void	ft_fill_end_tab(t_array *a, t_matrix m)
+{
+	int		i;
+	int		j;
 
-# define BUFF_SIZE 999
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+	j = -1;
+	while (++j < a->y)
+	{
+		i = -1;
+		while (++i < a->nb_x_line[j])
+			a->end_tab[j][i] = ft_apply_matrix(a->tab_pt[j][i], m);
+	}
+}

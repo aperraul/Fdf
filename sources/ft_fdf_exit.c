@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_fdf_exit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/22 15:46:29 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 12:51:15 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/14 16:06:30 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/14 18:11:21 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../Headers/Header.h"
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "../libft/libft.h"
-
-# define BUFF_SIZE 999
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+void	ft_fdf_exit(t_fdf *fdf)
+{
+	ft_del_array(fdf->array);
+	ft_clear_mlx(fdf->mlx);
+	ft_memdel((void **)fdf);
+	exit(0);
+}

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_fdf_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/22 15:46:29 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 12:51:15 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/06 12:48:01 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/13 16:47:58 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../Headers/Header.h"
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "../libft/libft.h"
+t_fdf	*ft_init_fdf(t_mlx *mlx, t_array *array)
+{
+	t_fdf	*fdf;
 
-# define BUFF_SIZE 999
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+	fdf = (t_fdf *)ft_memalloc(sizeof(t_fdf));
+	fdf->array = array;
+	fdf->mlx = mlx;
+	fdf->key = -1;
+	fdf->rad = ft_make_vector(M_PI / 6, M_PI / 6, 0.0f);
+	fdf->pos = ft_make_pt(400, 400);
+	fdf->scale = ft_make_3Dpt(4, 4, 4);
+	return (fdf);
+}

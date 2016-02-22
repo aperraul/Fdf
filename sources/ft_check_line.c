@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_check_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/22 15:46:29 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 12:51:15 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/04 17:18:01 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/13 16:09:55 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../Headers/Header.h"
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "../libft/libft.h"
+int		ft_check_line(char *line)
+{
+	int		i;
 
-# define BUFF_SIZE 999
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+	i = 0;
+	while (line[i])
+	{
+		if ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ' ||
+				line[i] == '-')
+			i++;
+		else
+			return (0);
+	}
+	return (1);
+}

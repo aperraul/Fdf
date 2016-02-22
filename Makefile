@@ -6,28 +6,28 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/08 16:10:30 by aperraul          #+#    #+#              #
-#    Updated: 2016/02/14 17:55:08 by aperraul         ###   ########.fr        #
+#    Updated: 2016/02/22 12:49:31 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
 SRC = ./sources/main.c \
-	  ./Sources/alloc_fdf.c \
-	  ./Sources/create_array.c \
-	  ./Sources/del_fdf.c \
-	  ./Sources/fdf_event.c \
-	  ./Sources/ft_check_line.c \
-	  ./Sources/ft_fdf.c \
-	  ./Sources/ft_fdf_add_pos.c \
-	  ./Sources/ft_fdf_add_scale.c \
-	  ./Sources/ft_fdf_draw.c \
-	  ./Sources/ft_fdf_exit.c \
-	  ./Sources/ft_fdf_init.c \
-	  ./Sources/ft_fill_end_tab.c \
-	  ./Sources/ft_new_tab.c \
-	  ./Sources/ft_new_tab_pt.c \
-	  ./GNL/get_next_line.c \
+	  ./sources/alloc_fdf.c \
+	  ./sources/create_array.c \
+	  ./sources/del_fdf.c \
+	  ./sources/fdf_event.c \
+	  ./sources/ft_check_line.c \
+	  ./sources/ft_fdf.c \
+	  ./sources/ft_fdf_add_pos.c \
+	  ./sources/ft_fdf_add_scale.c \
+	  ./sources/ft_fdf_draw.c \
+	  ./sources/ft_fdf_exit.c \
+	  ./sources/ft_fdf_init.c \
+	  ./sources/ft_fill_end_tab.c \
+	  ./sources/ft_new_tab.c \
+	  ./sources/ft_new_tab_pt.c \
+	  ./gnl/get_next_line.c \
 
 OBJS = ./main.o \
 	   ./alloc_fdf.o \
@@ -48,7 +48,7 @@ OBJS = ./main.o \
 
 DRAW = ./Libdraw/draw.a
 
-LIBFT = ./Libft/libft.a
+LIBFT = ./libft/libft.a
 
 LIBMLX = ./libmlx/libmlx.a
 
@@ -71,17 +71,17 @@ $(OBJS): $(LIBFT) $(LIBMLX) $(DRAW)
 	$(CC) $(FLAGS) -c $(SRC)
 
 $(LIBFT):
-	make -C ./Libft/
+	make -C ./libft/
 
 $(LIBMLX):
-	make -C ./Libmlx/
+	make -C ./libmlx/
 
 $(DRAW):
 	make -C ./Libdraw/
 
 clean:
 	$(RM) $(OBJS)
-	make clean -C ./Libft/
+	make clean -C ./libft/
 	make clean -C ./libmlx/
 	make clean -C ./Libdraw/
 

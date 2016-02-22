@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 18:12:18 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/22 12:43:50 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBDRAW_H
 
 #include "../minilibx/mlx.h"
-#include "../Libft/libft.h"
+#include "../libft/libft.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <math.h>

@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 17:43:29 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/22 15:00:33 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include "get_next_line.h"
-# include "../Libft/libft.h"
+# include "../libft/libft.h"
 # include "mlx.h"
 # include "Libdraw.h"
 # include "X.h"
