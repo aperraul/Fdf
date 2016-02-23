@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 16:36:20 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 11:40:19 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/23 15:04:38 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_rad_mod(t_fdf *fdf)
 	}
 	else if (fdf->key == 69 || fdf->key == 78)
 	{
-		if (fdf->key == 69)
+		if (fdf->key == 78)
 			fdf->rad.z += rad;
 		else
 			fdf->rad.z -= rad;

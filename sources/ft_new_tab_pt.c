@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/05 12:37:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 15:00:48 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/23 12:28:01 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_array		*ft_new_tab_pt(t_array *array)
 	t_pt	O;
 
 	O = ft_make_pt((array->max_size_x / 2), (array->y / 2));
-	array->tab_pt = ft_alloc_tab_pt(array);
 	pt.y = -1;
 	while (++pt.y < array->y)
 	{

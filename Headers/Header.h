@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 11:28:09 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/23 15:41:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct			t_fdf
 	int					key;
 	t_vector			rad;
 	t_pt				pos;
-	t_3Dpt				scale;
+	t_vector			scale;
 }						t_fdf;
 
 typedef struct			s_lstline
@@ -59,12 +59,13 @@ t_3Dpt					**ft_alloc_tab_pt(t_array *a);
 t_pt					**ft_alloc_end_tab(t_array *a);
 void					ft_fill_end_tab(t_array *a, t_matrix m);
 t_array					*ft_new_tab_pt(t_array *array);
-void					ft_fdf_add_scale(t_array *array, t_3Dpt scale);
+void					ft_fdf_add_scale(t_array *array, t_vector scale);
 void					ft_fdf_add_pos(t_array *a, t_pt pos);
 void					ft_fdf(t_fdf *fdf);
 void					ft_fdf_draw(t_array *a, t_mlx *mlx);
 int						ft_fdf_event(int keycode, t_fdf *fdf);
 void					ft_fdf_exit(t_fdf *fdf);
 void					ft_rad_mod(t_fdf *fdf);
+void					ft_scale_mod(t_fdf *fdf, t_array *a);
 
 #endif
