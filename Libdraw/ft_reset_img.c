@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fdf_init.c                                      :+:      :+:    :+:   */
+/*   ft_reset_img.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/06 12:48:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 11:37:24 by aperraul         ###   ########.fr       */
+/*   Created: 2016/02/23 11:29:17 by aperraul          #+#    #+#             */
+/*   Updated: 2016/02/23 11:33:30 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/Libdraw.h"
 
-t_fdf	*ft_init_fdf(t_mlx *mlx, t_array *array)
+void	ft_reset_img(t_mlx *mlx, int color)
 {
-	t_fdf	*fdf;
+	int		octet;
+	int		position;
+	char	*img;
 
-	fdf = (t_fdf *)ft_memalloc(sizeof(t_fdf));
-	fdf->array = array;
-	fdf->mlx = mlx;
-	fdf->key = -1;
-	fdf->rad = ft_make_vector(0.0f, 0.0f, 0.0f);
-	fdf->pos = ft_make_pt(400, 400);
-	fdf->scale = ft_make_3Dpt(4, 4, 4);
-	return (fdf);
+	img = mlx->mlx_img->data;
+	octet = mlx->mlx_img->bpp / 8;
+	position = 0;
+	while (position < mlx->mlx_img->max_size)
+	{
+		ft_memcpy(img + position, &color, octet);
+		position += octet;
+	}
 }

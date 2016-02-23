@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/22 12:43:50 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/23 11:32:54 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ void			ft_draw_line(t_line line, t_mlx *mlx, int color);
 void			ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color);
 void			ft_clear_mlx(t_mlx *mlx);
 void			ft_flush_img(t_mlx *x);
+void			ft_reset_img(t_mlx *mlx, int color);
 
 #endif
