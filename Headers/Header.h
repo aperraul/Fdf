@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 15:41:15 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/23 16:15:37 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void					ft_fdf_draw(t_array *a, t_mlx *mlx);
 int						ft_fdf_event(int keycode, t_fdf *fdf);
 void					ft_fdf_exit(t_fdf *fdf);
 void					ft_rad_mod(t_fdf *fdf);
+void					ft_pos_mod(t_fdf *fdf);
 void					ft_scale_mod(t_fdf *fdf, t_array *a);
 
 #endif
