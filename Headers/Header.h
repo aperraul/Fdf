@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 16:15:37 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:40:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct			s_array
 	int					max_size_x;
 	int					y;
 	int					*nb_x_line;
+	int					max_z;
+	int					min_z;
 }						t_array;
 
 typedef struct			t_fdf
@@ -68,5 +70,6 @@ void					ft_fdf_exit(t_fdf *fdf);
 void					ft_rad_mod(t_fdf *fdf);
 void					ft_pos_mod(t_fdf *fdf);
 void					ft_scale_mod(t_fdf *fdf, t_array *a);
+void					ft_z_hight(t_array *a);
 
 #endif

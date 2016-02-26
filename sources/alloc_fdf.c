@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/05 11:34:35 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 12:22:45 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:33:22 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ t_array		*ft_alloc_array(t_array *array)
 	array->max_size_x = 0;
 	array->y = 0;
 	array->nb_x_line = NULL;
+	array->max_z = 0;
+	array->min_z = 0;
 	return (array);
 }
 
