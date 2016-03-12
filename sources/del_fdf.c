@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:24:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:50:55 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 17:44:35 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_array		*ft_del_array(t_array *array)
 	return (array);
 }
 
-t_lstline		*ft_del_list(t_lstline *begin)
+t_lstline	*ft_del_list(t_lstline *begin)
 {
 	t_lstline	*temp;
 

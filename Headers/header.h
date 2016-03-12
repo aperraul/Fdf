@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:46:55 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 18:00:14 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ void					ft_rad_mod(t_fdf *fdf);
 void					ft_pos_mod(t_fdf *fdf);
 void					ft_scale_mod(t_fdf *fdf, t_array *a);
 void					ft_z_hight(t_array *a);
+void					ft_pre_fdf(t_mlx *mlx, t_array *array);
 
 #endif
