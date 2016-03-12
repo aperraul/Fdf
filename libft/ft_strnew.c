@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 18:55:55 by aperraul          #+#    #+#             */
-/*   Updated: 2015/11/29 15:23:03 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 14:51:46 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*chr;
 
 	chr = (char *)malloc(sizeof(char) * (size + 1));
-	if (chr == NULL)
-		return (NULL);
-	chr[size] = '\0';
-	while (size > 0)
-	{
-		size--;
-		chr[size] = '\0';
-	}
-	return (chr);
+	if (chr)
+		return (ft_memset(chr, 0, size + 1));
+	return (NULL);
 }

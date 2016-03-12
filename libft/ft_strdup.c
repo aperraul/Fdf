@@ -6,30 +6,27 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:15:36 by aperraul          #+#    #+#             */
-/*   Updated: 2015/11/29 15:22:02 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 15:22:27 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(char *s1)
 {
 	int		cpt;
-	char	*buff;
+	char	*s2;
 
 	cpt = 0;
-	while (src[cpt] != '\0')
-		cpt++;
-	buff = (char*)malloc(sizeof(*src) * cpt);
-	if (buff == 0)
+	s2 = ft_strnew(ft_strlen(s1));
+	if (!s2)
 		return (NULL);
-	cpt = 0;
-	while (src[cpt] != '\0')
+	while (s1[cpt])
 	{
-		buff[cpt] = src[cpt];
+		s2[cpt] = s1[cpt];
 		cpt++;
 	}
-	buff[cpt] = '\0';
-	return (buff);
+	s2[cpt] = '\0';
+	return (s2);
 }

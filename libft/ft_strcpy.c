@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:28:18 by aperraul          #+#    #+#             */
-/*   Updated: 2015/11/25 19:05:34 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 15:18:01 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dest, const char *src)
 	int	cpt;
 
 	cpt = 0;
-	while (src[cpt] != '\0')
+	while (src[cpt])
 	{
 		dest[cpt] = src[cpt];
 		cpt++;

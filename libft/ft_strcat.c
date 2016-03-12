@@ -6,27 +6,21 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:24:05 by aperraul          #+#    #+#             */
-/*   Updated: 2015/11/25 04:29:13 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 15:17:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	int cpt1;
-	int cpt2;
+	int	size;
+	int	cpt;
 
-	cpt1 = 0;
-	cpt2 = 0;
-	while (dest[cpt1] != '\0')
-		cpt1++;
-	while (src[cpt2] != '\0')
-	{
-		dest[cpt1] = src[cpt2];
-		cpt1++;
-		cpt2++;
-	}
-	dest[cpt1] = '\0';
-	return (dest);
+	cpt = 0;
+	size = ft_strlen(s1);
+	while (s2[cpt])
+		s1[size++] = s2[cpt++];
+	s1[size] = '\0';
+	return (s1);
 }
