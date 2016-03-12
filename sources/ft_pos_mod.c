@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 16:14:24 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 16:20:44 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:46:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 void	ft_pos_mod(t_fdf *fdf)
 {

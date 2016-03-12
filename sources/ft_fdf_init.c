@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 12:48:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 16:14:04 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:45:40 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 t_fdf	*ft_init_fdf(t_mlx *mlx, t_array *array)
 {

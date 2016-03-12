@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 15:31:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/06 15:33:05 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:38:36 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
 t_matrix	ft_multiply_matrix(t_matrix m1, t_matrix m2)
 {

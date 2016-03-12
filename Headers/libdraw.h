@@ -6,19 +6,19 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 11:32:54 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:43:04 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBDRAW_H
 # define LIBDRAW_H
 
-#include "../minilibx/mlx.h"
-#include "../libft/libft.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <math.h>
-#include <fcntl.h>
+# include "../minilibx/mlx.h"
+# include "../libft/libft.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <math.h>
+# include <fcntl.h>
 
 typedef struct	s_line
 {
@@ -42,8 +42,8 @@ typedef struct	s_mlx
 {
 	void		*p_mlx;
 	void		*p_win;
-	int			X;
-	int			Y;
+	int			x;
+	int			y;
 	t_img		*mlx_img;
 }				t_mlx;
 
@@ -70,20 +70,20 @@ typedef struct	s_matrix_rot
 	t_matrix	m;
 }				t_matrix_rot;
 
-typedef struct	s_3Dpt
+typedef struct	s_3dpt
 {
 	int			x;
 	int			y;
 	int			z;
-}				t_3Dpt;
+}				t_3dpt;
 
 t_mlx			*ft_mlx_init(t_mlx *mlx, int size_x, int size_y, char *title);
 void			ft_new_image(t_mlx *mlx);
 void			ft_draw_pixel(t_mlx *mlx, int color, t_pt pt);
 t_pt			ft_make_pt(int x, int y);
-t_pt			ft_apply_matrix(t_3Dpt pt, t_matrix m);
-t_3Dpt			ft_make_3Dpt(int x, int y, int z);
-t_3Dpt			**ft_del_tab_pts(t_3Dpt **tab);
+t_pt			ft_apply_matrix(t_3dpt pt, t_matrix m);
+t_3dpt			ft_make_3dpt(int x, int y, int z);
+t_3dpt			**ft_del_tab_pts(t_3dpt **tab);
 t_line			ft_make_line(int x1, int y1, int x2, int y2);
 t_vector		ft_make_vector(float x, float y, float z);
 t_matrix		ft_make_matrix_x(float rad);

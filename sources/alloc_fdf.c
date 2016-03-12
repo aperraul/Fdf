@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/05 11:34:35 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/25 14:33:22 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:48:53 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 t_array		*ft_alloc_array(t_array *array)
 {
@@ -27,19 +27,19 @@ t_array		*ft_alloc_array(t_array *array)
 	return (array);
 }
 
-t_3Dpt		**ft_alloc_tab_pt(t_array *a)
+t_3dpt		**ft_alloc_tab_pt(t_array *a)
 {
-	t_3Dpt		**tab3;
+	t_3dpt		**tab3;
 	int			b;
 
-	tab3 = (t_3Dpt **)ft_memalloc(sizeof(t_3Dpt *) * (a->y + 1));
+	tab3 = (t_3dpt **)ft_memalloc(sizeof(t_3dpt *) * (a->y + 1));
 	b = -1;
 	while (++b < a->y)
-	tab3[b] = (t_3Dpt *)ft_memalloc(sizeof(t_3Dpt) * (a->nb_x_line[b] + 1));
+		tab3[b] = (t_3dpt *)ft_memalloc(sizeof(t_3dpt) * (a->nb_x_line[b] + 1));
 	return (tab3);
 }
 
-t_pt	**ft_alloc_end_tab(t_array *a)
+t_pt		**ft_alloc_end_tab(t_array *a)
 {
 	t_pt	**end_tab;
 	int		b;

@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 16:14:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/27 13:08:06 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:42:22 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
 void	ft_draw_horizontal(t_line line, t_mlx *mlx, int variance, int color)
 {
@@ -38,7 +38,7 @@ void	ft_draw_bresenham(t_line line, t_mlx *mlx, int color, t_pt variance)
 		line.dx = -line.dx;
 	if (line.dy < 0)
 		line.dy = -line.dy;
-	error = -line.dx>>1;
+	error = -line.dx >> 1;
 	while (line.start.x != line.end.x)
 	{
 		ft_draw_pixel(mlx, color, line.start);

@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 14:30:41 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/25 14:39:22 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:46:26 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 void	ft_z_hight(t_array *a)
 {

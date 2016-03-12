@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_make_3Dpt.c                                     :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/25 15:58:02 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 15:43:47 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/27 14:55:54 by aperraul          #+#    #+#             */
+/*   Updated: 2015/11/29 15:15:33 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "libft.h"
 
-t_3Dpt		ft_make_3Dpt(int x, int y, int z)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	t_3Dpt		pt;
-
-	pt.x = x;
-	pt.y = y;
-	pt.z = z;
-	return (pt);
+	if (s1 && s2)
+		return (ft_strncmp(s1, s2, n) == 0 ? 1 : 0);
+	return (0);
 }

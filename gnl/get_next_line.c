@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 15:26:45 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/26 15:26:48 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 15:24:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/get_next_line.h"
+#include "get_next_line.h"
 
 static char		*ft_get_line(char *str)
 {
@@ -66,7 +66,7 @@ static int		gnl_alloc(char **text, char **buff, int fd)
 		if (!(*text = ft_strnew(1)))
 			return (-1);
 	}
-	return (0);
+	return (1);
 }
 
 int				get_next_line(const int fd, char **line)
@@ -76,7 +76,7 @@ int				get_next_line(const int fd, char **line)
 	char		*temp;
 	int			ret;
 
-	if ((ret = 1) && gnl_alloc(&text[fd], &buff, fd) == -1)
+	if (((ret = 1) && gnl_alloc(&text[fd], &buff, fd) == -1) || line == NULL)
 		return (-1);
 	while (!(ft_strchr(text[fd], '\n')) && ret > 0)
 	{
@@ -92,6 +92,5 @@ int				get_next_line(const int fd, char **line)
 	text[fd] = ft_other_lines(text[fd]);
 	if ((int)ft_strlen(*line))
 		return (1);
-	else
-		return (ft_last_line(&text[fd], ret) == 0 ? 0 : 1);
+	return (ft_last_line(&text[fd], ret) == 0 ? 0 : 1);
 }

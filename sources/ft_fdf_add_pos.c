@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:51:15 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/08 13:19:49 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:51:14 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 void	ft_fdf_add_pos(t_array *a, t_pt pos)
 {
@@ -23,8 +23,8 @@ void	ft_fdf_add_pos(t_array *a, t_pt pos)
 		i = -1;
 		while (i++ < a->nb_x_line[j])
 		{
-		a->end_tab[j][i].x += pos.x;
-		a->end_tab[j][i].y += pos.y;
+			a->end_tab[j][i].x += pos.x;
+			a->end_tab[j][i].y += pos.y;
 		}
 	}
 }

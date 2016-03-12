@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 16:14:21 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/27 13:14:23 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:38:10 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
 t_line		ft_make_line(int x1, int y1, int x2, int y2)
 {

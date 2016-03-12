@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 15:54:07 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/27 13:04:52 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:38:20 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
 t_pt	ft_make_pt(int x, int y)
 {

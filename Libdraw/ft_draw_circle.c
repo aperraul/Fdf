@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:21:02 by aperraul          #+#    #+#             */
-/*   Updated: 2016/01/27 17:50:59 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:41:50 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
 void		ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color)
 {
@@ -20,19 +20,19 @@ void		ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color)
 	rad = 0;
 	while (rad < (2 * 3.141f))
 	{
-		pt.x = (center.x + size*cos(rad));
-		pt.y = (center.y + size*sin(rad));
+		pt.x = (center.x + size * cos(rad));
+		pt.y = (center.y + size * sin(rad));
 		ft_draw_pixel(mlx, color, pt);
 		rad += (3.141f / 2000);
 	}
 	size--;
 	while (size > 0)
 	{
-			rad = 0;
-			while (rad < (2 * 3.141f))
+		rad = 0;
+		while (rad < (2 * 3.141f))
 		{
-			pt.x = (center.x + size*cos(rad));
-			pt.y = (center.y + size*sin(rad));
+			pt.x = (center.x + size * cos(rad));
+			pt.y = (center.y + size * sin(rad));
 			ft_draw_pixel(mlx, 0x00acac, pt);
 			rad += (3.141f / 2000);
 		}

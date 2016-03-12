@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/14 12:23:37 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 17:48:53 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:44:44 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 int		ft_fdf_event(int keycode, t_fdf *fdf)
 {

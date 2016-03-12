@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:29:26 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/13 14:43:57 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:45:46 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 void	ft_fill_end_tab(t_array *a, t_matrix m)
 {

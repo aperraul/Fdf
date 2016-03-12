@@ -6,15 +6,16 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 13:08:18 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 15:41:19 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:51:29 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 void	ft_fdf_add_scale(t_array *array, t_vector scale)
 {
 	t_pt	pt;
+
 	array = ft_new_tab_pt(array);
 	pt.y = -1;
 	while (++pt.y < array->y)

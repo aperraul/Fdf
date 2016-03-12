@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/25 13:44:41 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:44:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 t_lstline		*ft_next_list(void)
 {

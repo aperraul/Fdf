@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 16:39:43 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/25 13:46:35 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:52:29 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
 
 t_array		*ft_new_tab(t_lstline *list, t_array *a)
 {
@@ -27,7 +27,7 @@ t_array		*ft_new_tab(t_lstline *list, t_array *a)
 		str = ft_strsplit(list->line, ' ');
 		a->nb_x_line[j] = ft_memlen((void **)str);
 		if (a->max_size_x < a->nb_x_line[j])
-			a->max_size_x = a ->nb_x_line[j];
+			a->max_size_x = a->nb_x_line[j];
 		a->tab[j] = (int *)ft_memalloc(sizeof(int) * (a->nb_x_line[j] + 1));
 		i = -1;
 		while (str[++i])

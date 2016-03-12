@@ -6,13 +6,13 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/14 18:08:20 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/14 18:11:01 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:37:39 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Libdraw.h"
+#include "../Headers/libdraw.h"
 
-t_3Dpt	**ft_del_tab_pts(t_3Dpt **tab)
+t_3dpt	**ft_del_tab_pts(t_3dpt **tab)
 {
 	int		i;
 

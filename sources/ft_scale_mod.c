@@ -6,11 +6,12 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 14:33:05 by aperraul          #+#    #+#             */
-/*   Updated: 2016/02/23 15:41:23 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/12 16:54:11 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/Header.h"
+#include "../Headers/header.h"
+
 static	void	ft_x_scale(t_fdf *fdf, t_array *a)
 {
 	if (fdf->key == 12 || fdf->key == 13)
@@ -22,8 +23,6 @@ static	void	ft_x_scale(t_fdf *fdf, t_array *a)
 		ft_fdf_add_scale(a, fdf->scale);
 	}
 }
-
-#include <stdio.h>
 
 static	void	ft_y_scale(t_fdf *fdf, t_array *a)
 {
