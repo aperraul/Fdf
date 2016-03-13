@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:18:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:44:59 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/13 11:17:11 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,25 @@
 int		ft_check_line(char *line)
 {
 	int		i;
+	int		f;
 
 	i = 0;
+	f = 0;
 	while (line[i])
 	{
 		if ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ' ||
 				line[i] == '-')
+		{
+			if (line[i] == '-' && (line[i + 1] == '-' || line[i + 1] == ' '))
+				return (0);
+			if ((line[i] >= '0' && line[i] <= '9') || line[i] == '-')
+				f++;
 			i++;
+		}
 		else
 			return (0);
 	}
+	if (f == 0)
+		return (0);
 	return (1);
 }

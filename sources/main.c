@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 17:45:54 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/13 11:51:51 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ int		main(int argc, char **argv)
 		if (!(array = ft_create_array(array, fd)))
 		{
 			close(fd);
-			ft_putstr("bad line");
+			ft_putstr("bad file");
 			return (0);
 		}
 		close(fd);
 		ft_pre_fdf(mlx, array);
 	}
 	else
-		ft_putstr("erreur");
+		ft_putstr("erreur: nb arguments != 1");
 	return (0);
 }

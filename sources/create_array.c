@@ -6,13 +6,13 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:44:15 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/13 11:33:40 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/header.h"
 
-t_lstline		*ft_next_list(void)
+t_lstline	*ft_next_list(void)
 {
 	t_lstline	*list;
 
@@ -22,7 +22,7 @@ t_lstline		*ft_next_list(void)
 	return (list);
 }
 
-t_lstline		*ft_add_list(t_lstline *begin, char *line)
+t_lstline	*ft_add_list(t_lstline *begin, char *line)
 {
 	t_lstline	*list;
 
@@ -41,18 +41,17 @@ t_lstline		*ft_add_list(t_lstline *begin, char *line)
 	return (begin);
 }
 
-t_array			*ft_create_array(t_array *array, int fd)
+t_array		*ft_create_array(t_array *array, int fd)
 {
 	t_lstline	*list;
 	int			nb_lines;
-	int			state;
 	char		*line;
 
 	line = NULL;
 	list = NULL;
-	state = 1;
 	nb_lines = 0;
-	while ((state = get_next_line(fd, &line)) > 0)
+
+	while (get_next_line(fd, &line) > 0)
 	{
 		if (ft_check_line(line) == 0)
 		{
@@ -62,6 +61,12 @@ t_array			*ft_create_array(t_array *array, int fd)
 		}
 		list = ft_add_list(list, line);
 		nb_lines++;
+	}
+	if (nb_lines == 0)
+	{
+		array = ft_del_array(array);
+		list = ft_del_list(list);
+		return (array);
 	}
 	array->y = nb_lines;
 	array = ft_new_tab(list, array);
