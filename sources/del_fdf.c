@@ -6,11 +6,24 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:24:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 17:44:35 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/14 11:32:47 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/header.h"
+
+t_array		*ft_del_tab_pt(t_array *array)
+{
+	int		i;
+
+	if (!array->tab_pt)
+		return (NULL);
+	i = -1;
+	while (array->tab_pt[++i])
+		ft_memdel((void **)&array->tab_pt[i]);
+	ft_memdel((void **)array->tab_pt);
+	return (array);
+}
 
 t_array		*ft_del_array(t_array *array)
 {

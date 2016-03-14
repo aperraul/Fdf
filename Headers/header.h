@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/13 17:37:25 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/14 11:32:43 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ t_3dpt					**ft_alloc_tab_pt(t_array *a);
 t_pt					**ft_alloc_end_tab(t_array *a);
 void					ft_fill_end_tab(t_array *a, t_matrix m);
 t_array					*ft_new_tab_pt(t_array *array);
+t_array					*ft_del_tab_pt(t_array *array);
 void					ft_fdf_add_scale(t_array *array, t_vector scale);
 void					ft_fdf_add_pos(t_array *a, t_pt pos);
 void					ft_fdf(t_fdf *fdf);

@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 13:08:18 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/13 17:33:51 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/14 13:02:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_fdf_add_scale(t_array *array, t_vector scale)
 //	int		j;
 
 	array = ft_new_tab_pt(array);
-	ft_putnbr(array->tab_pt[3][2].z);
 //	j = -1;
 //	while (++j < array->y)
 //	{
