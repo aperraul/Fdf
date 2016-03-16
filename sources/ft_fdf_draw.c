@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:56:40 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:53:21 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 15:01:28 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static	void	ft_fdf_draw_hor(t_array *a, t_mlx *mlx)
 			ft_draw_line(line, mlx, 0xffffff);
 		}
 	}
+	ft_draw_pixel(mlx, 0xffffff, p2);
 }
 
 static	void	ft_fdf_draw_ver(t_array *a, t_mlx *mlx)
@@ -61,6 +62,7 @@ static	void	ft_fdf_draw_ver(t_array *a, t_mlx *mlx)
 			}
 		}
 	}
+	ft_draw_pixel(mlx, 0xffffff, p2);
 }
 
 void			ft_fdf_draw(t_array *a, t_mlx *mlx)
