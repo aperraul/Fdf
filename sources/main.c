@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 13:14:09 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:56:53 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ int		main(int argc, char **argv)
 	{
 		array = NULL;
 		if ((fd = open(argv[1], O_RDONLY)) == -1)
+		{
+			ft_putstr("error 404 file not found");
 			return (0);
+		}
 		if (!(array = ft_alloc_array(array)))
 			return (0);
 		if (!(array = ft_create_array(array, fd)))

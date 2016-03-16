@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 11:30:07 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:54:39 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ t_array		*ft_create_array(t_array *a, int fd)
 		if ((nb_char = ft_check_line(line)) == 0)
 		{
 			a = ft_del_array(a);
-			a->list = ft_del_list(a->list);
 			return (a);
 		}
 		a->list = ft_add_list(a->list, line);
@@ -64,7 +63,6 @@ t_array		*ft_create_array(t_array *a, int fd)
 	if (nb_lines == 0 || (nb_lines == 1 && nb_char == 1))
 	{
 		a = ft_del_array(a);
-		a->list = ft_del_list(a->list);
 		return (a);
 	}
 	a->y = nb_lines;

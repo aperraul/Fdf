@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:18:01 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 12:43:34 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:39:26 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_check_line(char *line)
 		{
 			if (line[i] == '-' && (line[i + 1] == '-' || line[i + 1] == ' '))
 				return (0);
-			if ((line[i] >= '0' && line[i] <= '9') || line[i] == '-')
+			if (line[i] >= '0' && line[i] <= '9')
 				f++;
 			i++;
 		}

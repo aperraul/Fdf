@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:24:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 11:52:28 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:22:51 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,22 @@ t_array		*ft_del_tab_pt(t_array *array)
 	return (array);
 }
 
+t_lstline	*ft_del_list(t_lstline *begin)
+{
+	t_lstline	*temp;
+
+	if (!begin)
+		return (NULL);
+	while (begin)
+	{
+		temp = begin->next;
+		ft_memdel((void **)&begin->line);
+		ft_memdel((void **)&begin);
+		begin = temp;
+	}
+	return (begin);
+}
+
 t_array		*ft_del_array(t_array *array)
 {
 	int		i;
@@ -32,6 +48,8 @@ t_array		*ft_del_array(t_array *array)
 	i = -1;
 	if (array)
 	{
+		if (array->list)
+			ft_del_list(array->list);
 		if (array->tab_pt)
 			ft_del_tab_pts(array->tab_pt);
 		if (array->end_tab)
@@ -58,20 +76,4 @@ t_fdf		*ft_del_tab(t_fdf *fdf)
 		ft_memdel((void **)&fdf->array->tab[i]);
 	ft_memdel((void **)fdf->array->tab);
 	return (fdf);
-}
-
-t_lstline	*ft_del_list(t_lstline *begin)
-{
-	t_lstline	*temp;
-
-	if (!begin)
-		return (NULL);
-	while (begin)
-	{
-		temp = begin->next;
-		ft_memdel((void **)&begin->line);
-		ft_memdel((void **)&begin);
-		begin = temp;
-	}
-	return (begin);
 }

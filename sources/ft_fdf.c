@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 15:05:27 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 11:53:37 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:03:21 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_fdf(t_fdf *fdf)
 
 	ft_reset_tab(fdf);
 	ft_reset_img(fdf->mlx, 0x000000);
-	ft_scale_mod(fdf, fdf->array);
+	ft_scale_mod(fdf);
 	ft_rad_mod(fdf);
 	ft_pos_mod(fdf);
 	rot.mx = ft_make_matrix_x(fdf->rad.x);

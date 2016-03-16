@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 14:33:05 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 17:12:32 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 12:03:08 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,14 @@ static	void	ft_size_mod(t_fdf *fdf)
 	}
 }
 
-void			ft_scale_mod(t_fdf *fdf, t_array *a)
+void			ft_scale_mod(t_fdf *fdf)
 {
 	ft_size_mod(fdf);
 	ft_x_scale(fdf);
 	ft_y_scale(fdf);
 	ft_z_scale(fdf);
-	ft_del_tab_pt(a);
-	a->tab_pt = ft_alloc_tab_pt(a);
-	ft_fdf_add_scale(a, fdf->scale);
+	if (fdf->array->tab_pt)
+		ft_del_tab_pt(fdf->array);
+	fdf->array->tab_pt = ft_alloc_tab_pt(fdf->array);
+	ft_fdf_add_scale(fdf->array, fdf->scale);
 }
