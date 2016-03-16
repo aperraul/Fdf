@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:56:33 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 12:56:53 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 15:46:41 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ int		main(int argc, char **argv)
 {
 	int			fd;
 	t_array		*array;
-	t_mlx		*mlx;
 
-	mlx = NULL;
 	if (argc == 2)
 	{
 		array = NULL;
@@ -36,9 +34,8 @@ int		main(int argc, char **argv)
 			return (0);
 		}
 		close(fd);
-		ft_pre_fdf(mlx, array);
+		ft_pre_fdf(array);
 	}
-	else
-		ft_putstr("erreur: nb arguments != 1");
+	ft_putstr("erreur: nb arguments != 1");
 	return (0);
 }

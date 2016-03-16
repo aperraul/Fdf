@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/08 16:10:30 by aperraul          #+#    #+#              #
-#    Updated: 2016/03/16 11:53:56 by aperraul         ###   ########.fr        #
+#    Updated: 2016/03/16 15:18:25 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ SRC = ./sources/main.c \
 	  ./sources/ft_rad_mod.c \
 	  ./sources/ft_pos_mod.c \
 	  ./sources/ft_scale_mod.c \
-	  ./sources/ft_z_hight.c \
 	  ./sources/pre_fdf.c \
 	  ./sources/reset_tab.c \
 	  ./gnl/get_next_line.c
@@ -53,7 +52,6 @@ OBJS = ./main.o \
 	   ./ft_rad_mod.o \
 	   ./ft_pos_mod.o \
 	   ./ft_scale_mod.o \
-	   ./ft_z_hight.o \
 	   ./pre_fdf.o \
 	   ./reset_tab.o \
 	   ./get_next_line.o

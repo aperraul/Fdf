@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 12:54:39 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 15:07:21 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ t_array		*ft_create_array(t_array *a, int fd)
 
 	line = NULL;
 	nb_lines = 0;
-
 	while (get_next_line(fd, &line) > 0)
 	{
 		if ((nb_char = ft_check_line(line)) == 0)

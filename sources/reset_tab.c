@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 11:32:32 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 11:55:20 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 15:15:56 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_fdf	*ft_reset_tab(t_fdf *fdf)
 	char		**str;
 	int			i;
 	int			j;
-	int			k;
 
 	if (fdf->array->tab)
 		ft_del_tab(fdf);
@@ -28,13 +27,14 @@ t_fdf	*ft_reset_tab(t_fdf *fdf)
 	while (++j < fdf->array->y)
 	{
 		str = ft_strsplit(lst->line, ' ');
-		fdf->array->tab[j] = (int *)ft_memalloc(sizeof(int) * (fdf->array->nb_x_line[j] + 1));
+		fdf->array->tab[j] = (int *)ft_memalloc(sizeof(int) *
+				(fdf->array->nb_x_line[j] + 1));
 		i = -1;
 		while (str[++i])
-			fdf->array->tab[j][i] =ft_atoi(str[i]);
-		k = -1;
-		while (str[++k])
-			ft_memdel((void **)&str[k]);
+			fdf->array->tab[j][i] = ft_atoi(str[i]);
+		i = -1;
+		while (str[++i])
+			ft_memdel((void **)&str[i]);
 		ft_memdel((void **)str);
 		lst = lst->next;
 	}
