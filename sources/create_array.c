@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:17:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 12:46:54 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 11:30:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,36 +41,34 @@ t_lstline	*ft_add_list(t_lstline *begin, char *line)
 	return (begin);
 }
 
-t_array		*ft_create_array(t_array *array, int fd)
+t_array		*ft_create_array(t_array *a, int fd)
 {
-	t_lstline	*list;
 	int			nb_lines;
 	char		*line;
 	int			nb_char;
 
 	line = NULL;
-	list = NULL;
 	nb_lines = 0;
 
 	while (get_next_line(fd, &line) > 0)
 	{
 		if ((nb_char = ft_check_line(line)) == 0)
 		{
-			array = ft_del_array(array);
-			list = ft_del_list(list);
-			return (array);
+			a = ft_del_array(a);
+			a->list = ft_del_list(a->list);
+			return (a);
 		}
-		list = ft_add_list(list, line);
+		a->list = ft_add_list(a->list, line);
 		nb_lines++;
 	}
 	if (nb_lines == 0 || (nb_lines == 1 && nb_char == 1))
 	{
-		array = ft_del_array(array);
-		list = ft_del_list(list);
-		return (array);
+		a = ft_del_array(a);
+		a->list = ft_del_list(a->list);
+		return (a);
 	}
-	array->y = nb_lines;
-	array = ft_new_tab(list, array);
-	array->tab_pt = ft_alloc_tab_pt(array);
-	return (array);
+	a->y = nb_lines;
+	a = ft_new_tab(a->list, a);
+	a->tab_pt = ft_alloc_tab_pt(a);
+	return (a);
 }

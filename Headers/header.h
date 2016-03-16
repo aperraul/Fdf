@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 11:32:43 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/16 11:52:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@
 # include "libdraw.h"
 # include "X.h"
 
+typedef struct			s_lstline
+{
+	struct s_lstline	*next;
+	char				*line;
+}						t_lstline;
+
 typedef struct			s_array
 {
 	t_3dpt				**tab_pt;
 	t_pt				**end_tab;
 	int					**tab;
+	t_lstline			*list;
 	int					max_size_x;
 	int					y;
 	int					*nb_x_line;
@@ -44,20 +51,16 @@ typedef struct			s_fdf
 	t_vector			scale;
 }						t_fdf;
 
-typedef struct			s_lstline
-{
-	struct s_lstline	*next;
-	char				*line;
-}						t_lstline;
-
 t_array					*ft_create_array(t_array *array, int fd);
 t_array					*ft_new_tab(t_lstline *list, t_array *array);
 int						ft_check_line(char *line);
+t_fdf					*ft_reset_tab(t_fdf *fdf);
 t_array					*ft_del_array(t_array *array);
 t_lstline				*ft_del_list(t_lstline *begin);
 t_fdf					*ft_init_fdf(t_mlx *mlx, t_array *array);
 t_array					*ft_alloc_array(t_array *array);
 t_3dpt					**ft_alloc_tab_pt(t_array *a);
+t_fdf					*ft_del_tab(t_fdf *fdf);
 t_pt					**ft_alloc_end_tab(t_array *a);
 void					ft_fill_end_tab(t_array *a, t_matrix m);
 t_array					*ft_new_tab_pt(t_array *array);

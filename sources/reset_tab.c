@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_new_tab.c                                       :+:      :+:    :+:   */
+/*   reset_tab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/04 16:39:43 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/14 17:12:00 by aperraul         ###   ########.fr       */
+/*   Created: 2016/03/16 11:32:32 by aperraul          #+#    #+#             */
+/*   Updated: 2016/03/16 11:55:20 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Headers/header.h"
 
-t_array		*ft_new_tab(t_lstline *list, t_array *a)
+t_fdf	*ft_reset_tab(t_fdf *fdf)
 {
-	int		k;
-	int		j;
-	int		i;
-	char	**str;
+	t_lstline	*lst;
+	char		**str;
+	int			i;
+	int			j;
+	int			k;
 
+	if (fdf->array->tab)
+		ft_del_tab(fdf);
+	lst = fdf->array->list;
 	j = -1;
-	a->tab = (int **)ft_memalloc(sizeof(int *) * (a->y + 1));
-	a->nb_x_line = (int *)ft_memalloc(sizeof(int) * (a->y + 1));
-	while (++j < a->y)
+	fdf->array->tab = (int **)ft_memalloc(sizeof(int *) * (fdf->array->y + 1));
+	while (++j < fdf->array->y)
 	{
-		str = ft_strsplit(list->line, ' ');
-		a->nb_x_line[j] = ft_memlen((void **)str);
-		if (a->max_size_x < a->nb_x_line[j])
-			a->max_size_x = a->nb_x_line[j];
-		a->tab[j] = (int *)ft_memalloc(sizeof(int) * (a->nb_x_line[j] + 1));
+		str = ft_strsplit(lst->line, ' ');
+		fdf->array->tab[j] = (int *)ft_memalloc(sizeof(int) * (fdf->array->nb_x_line[j] + 1));
 		i = -1;
 		while (str[++i])
-			a->tab[j][i] = ft_atoi(str[i]);
+			fdf->array->tab[j][i] =ft_atoi(str[i]);
 		k = -1;
 		while (str[++k])
 			ft_memdel((void **)&str[k]);
 		ft_memdel((void **)str);
-		list = list->next;
+		lst = lst->next;
 	}
-	return (a);
+	return (fdf);
 }
