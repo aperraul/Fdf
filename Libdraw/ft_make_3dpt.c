@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 15:58:02 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:36:12 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:20:31 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 t_3dpt		ft_make_3dpt(int x, int y, int z)
 {

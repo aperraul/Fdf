@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/08 16:10:30 by aperraul          #+#    #+#              #
-#    Updated: 2016/03/16 15:18:25 by aperraul         ###   ########.fr        #
+#    Updated: 2016/03/18 14:23:17 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,9 +91,9 @@ $(DRAW):
 
 clean:
 	$(RM) $(OBJS)
-#	make clean -C ./libft/
-#	make clean -C ./libmlx/
-#	make clean -C ./Libdraw/
+	make clean -C ./libft/
+	make clean -C ./libmlx/
+	make clean -C ./Libdraw/
 
 fclean: clean
 	$(RM) $(NAME) $(LIBFT) $(LIBMLX) $(DRAW)

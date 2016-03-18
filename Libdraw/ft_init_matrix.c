@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/06 12:32:09 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:37:58 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:20:24 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 t_matrix	ft_init_matrix(t_pt pos)
 {

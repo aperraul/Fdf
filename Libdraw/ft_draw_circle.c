@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 16:21:02 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:41:50 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:20:16 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 void		ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color)
 {

@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 16:05:40 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:39:56 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:21:35 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 void		ft_new_image(t_mlx *mlx)
 {

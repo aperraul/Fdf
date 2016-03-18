@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 14:47:28 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:39:25 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:21:30 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 t_mlx	*ft_mlx_init(t_mlx *mlx, int size_x, int size_y, char *title)
 {

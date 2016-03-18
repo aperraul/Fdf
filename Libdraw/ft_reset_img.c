@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 11:29:17 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:38:46 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:21:15 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 void	ft_reset_img(t_mlx *mlx, int color)
 {

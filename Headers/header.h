@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/31 12:03:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 15:44:21 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:22:11 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <fcntl.h>
 # include "../gnl/get_next_line.h"
 # include "../libft/libft.h"
-# include "mlx.h"
-# include "libdraw.h"
+# include "../minilibx/mlx.h"
+# include "../Libdraw/libdraw.h"
 # include "X.h"
 
 typedef struct			s_lstline

@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 16:14:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/16 14:41:18 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:19:33 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 void	ft_draw_horizontal(t_line line, t_mlx *mlx, int variance, int color)
 {

@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 12:59:10 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:40:57 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:19:40 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 void		ft_draw_pixel(t_mlx *mlx, int color, t_pt pt)
 {

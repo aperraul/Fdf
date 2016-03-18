@@ -6,11 +6,11 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 12:14:57 by aperraul          #+#    #+#             */
-/*   Updated: 2016/03/12 16:57:45 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/03/18 14:19:47 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/libdraw.h"
+#include "libdraw.h"
 
 t_pt		ft_apply_matrix(t_3dpt pt, t_matrix m)
 {
